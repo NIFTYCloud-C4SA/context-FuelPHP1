@@ -1,12 +1,19 @@
-# Bootstrap
-app/bootstrap*
+#OSX
+.DS_Store
+__MACOSX
+thumbs.db
+._*
+.Spotlight-V100
+.Trashes
 
-# Symfony directories
-vendor/*
-*/logs/*
-*/cache/*
-web/uploads/*
-web/bundles/*
+# Windows
+Thumbs.db 
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
 
-# Configuration files
-app/config/parameters.ini
+# concrete5
+contexts/krm/public_html/*
+!contexts/krm/public_html/.gitkeep
+contexts/krm/web_root.tar.gz
+contexts/krm.tar.gz
