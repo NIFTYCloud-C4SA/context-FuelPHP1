@@ -4,30 +4,26 @@ BIN_CURL="/usr/bin/curl -L"
 BIN_GIT="/usr/bin/git"
 BIN_MV="/bin/mv"
 BIN_RM="/bin/rm -rf"
+BIN_CP="/bin/cp"
 BIN_TAR="/usr/bin/tar"
 BIN_UNZIP="/usr/bin/unzip"
 BIN_MKDIR="/bin/mkdir"
+BIN_CD="cd"
 
-URL_REPO="https://github.com/concrete5japan/concrete5.git"
-URL_ARCHIVE="https://github.com/downloads/concrete5japan/concrete5/concrete5.5.2.1.ja.zip"
+URL_REPO="https://github.com/NIFTYCloud-C4SA/context-FuelPHP.git"
 
-PATH_WORKDIR="./workdir"
-
-## make context
-${BIN_MKDIR} ${PATH_WORKDIR}
-
-#${BIN_GIT} clone ${URL_REPO} ${PATH_WORKDIR}/tmp_concrete5
-
-${BIN_CURL} -o ${PATH_WORKDIR}/tmp_concrete5.zip ${URL_ARCHIVE}
-${BIN_UNZIP} ${PATH_WORKDIR}/tmp_concrete5.zip -d ${PATH_WORKDIR}
-${BIN_MV} ${PATH_WORKDIR}/concrete5*/* ./contexts/krm/public_html/
-${BIN_RM} ${PATH_WORKDIR}
-
-## create archive
-${BIN_TAR} czf ./contexts/krm/web_root.tar.gz ./contexts/krm/public_html
-${BIN_RM} ./contexts/krm/public_html
-${BIN_TAR} czf ./contexts/krm.tar.gz ./contexts/krm
-${BIN_RM} ./contexts/krm/
+${BIN_GIT} submodule update --init
+${BIN_CD} contexts/krm/docroot
+${BIN_GIT} submodule update --init
+${BIN_CD} ../ 
+${BIN_CP} -pr patch/db.php docroot/fuel/app/config/production/db.php
+${BIN_RM} patch
+${BIN_CD} docroot
+${BIN_TAR} czpf ../docroot.tar.gz *
+${BIN_CD} ../
+${BIN_RM} docroot
+${BIN_CD} ../
+${BIN_TAR} czpf krm.tar.gz krm
 
 ## end
 
