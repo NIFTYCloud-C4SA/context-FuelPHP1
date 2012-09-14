@@ -1,11 +1,11 @@
 {
-    "canvas_version":"1.0.0",
-        "ui-summary":"c5_v5.5.2",
-        "description-url":null,
+      "name":"fuelphp_1.3",
         "version":"1.0.0",
-        "ui-name":"Concrete5",
-        "name":"concrete5.5.2.1",
-        "description":"Concrete5 Context",
+        "category": { "language": "php", "framework": "fuelphp", "priority": 0 },
+        "ui-name":"FuelPHP1",
+        "ui-summary":"fuelphp_v1.3",
+        "description":"FuelPHP1.x は、PHP言語で書かれたWebアプリケーションフレームワークです。",
+        "description-url":null,
         "parameters": {
             "mysql_password": { "type": "string",
                 "restr": "[0-9A-Za-z]{8,16}",
@@ -14,7 +14,8 @@
                 "restr": "[0-9A-Za-z]{8,16}",
                 "auto": "[0-9A-Za-z]{8}" }
         },
-        "context_resources": ["web_root.tar.gz", "nginx.conf"],
+        "context_resources": ["docroot.tar.gz", "nginx.conf"],
+        "canvas_version":"1.0.0",
         "instruction": [
         { "type": "appliance",
             "appliance_name": "logviewer.local",
@@ -43,7 +44,7 @@
             "signal": "install",
             "in": {
                 "type": "archive",
-                "resource": "web_root.tar.gz"
+                "resource": "docroot.tar.gz"
             }
         },
         { "type": "appliance",
@@ -78,7 +79,7 @@
                 "interpreter_id": "php_id",
                 "max_children": 2,
                 "project_root": { "type": "template_string",
-                    "template": "/canvases/${canvas_id}/data/${disk_id}/public_html" },
+                    "template": "/canvases/${canvas_id}/data/${disk_id}/public" },
                 "env_ids": ["env_id"]
             }
         },

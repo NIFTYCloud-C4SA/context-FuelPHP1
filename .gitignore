@@ -12,8 +12,8 @@ ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 
-# concrete5
-contexts/krm/public_html/*
-!contexts/krm/public_html/.gitkeep
-contexts/krm/web_root.tar.gz
+# FuelPHP1
+contexts/krm/docroot/*
+!contexts/krm/docroot/.gitkeep
+contexts/krm/docroot.tar.gz
 contexts/krm.tar.gz
