@@ -1,7 +1,10 @@
 context-FuelPHP
 ===============
 
-FuelPHP 1.x for ニフティクラウドC4SA(NIFTYCloud C4SA)
+* FuelPHP 1.x for ニフティクラウドC4SA(NIFTYCloud C4SA)
+* FuelPHP
+ * http://fuelphp.com
+ * https://github.com/fuel/fuel/
 
 ## 作り方1
 
