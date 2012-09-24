@@ -1,5 +1,5 @@
 {
-      "name":"fuelphp_1.3",
+      "name":"FuelPHP1",
         "version":"1.0.0",
         "category": { "language": "php", "framework": "fuelphp", "priority": 0 },
         "ui-name":"FuelPHP1",
