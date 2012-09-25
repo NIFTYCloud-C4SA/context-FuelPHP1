@@ -1,8 +1,8 @@
-context-FuelPHP
+context-FuelPHP1
 ===============
 
 * FuelPHP 1.x for ニフティクラウドC4SA(NIFTYCloud C4SA)
- * FuelPHPをニフティクラウドC4SA上で展開するためのコンテクスト作成スクリプト
+ * FuelPHP 1.x をニフティクラウドC4SA上で展開するためのコンテクスト作成スクリプト
 * FuelPHP公式
  * http://fuelphp.com
  * https://github.com/fuel/fuel/
